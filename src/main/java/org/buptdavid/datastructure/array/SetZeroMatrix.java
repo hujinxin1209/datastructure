@@ -30,6 +30,16 @@ public class SetZeroMatrix {
             }
         }
     }
+	
+	public static void printlnMatrix(int[][] matrix){
+		for(int i = 0; i < matrix.length; i++){
+			String string = "";
+			for(int j = 0; j < matrix[i].length; j++){
+				string += matrix[i][j] + " ";
+			}
+			System.out.println(string);
+		}
+	}
 
 	/**
 	 * @param args
@@ -38,24 +48,12 @@ public class SetZeroMatrix {
 		int[][] matrix = { { 1, 2, 3, 4 }, { 2, 3, 4, 5 }, { 6, 5, 3, 4 },
 				{ 8, 6, 9, 0 }, { 4, 7, 0, 1 } };
 
-		for (int i = 0; i < matrix.length; i++) {
-			String matrixStr = "";
-			for (int j = 0; j < matrix[i].length; j++) {
-				matrixStr += matrix[i][j] + "  ";
-			}
-			System.out.println(matrixStr);
-		}
+		printlnMatrix(matrix);
 
 		System.out.println("Set Zero");
 		zeroGood(matrix);
 
-		for (int i = 0; i < matrix.length; i++) {
-			String matrixStr = "";
-			for (int j = 0; j < matrix[i].length; j++) {
-				matrixStr += matrix[i][j] + "  ";
-			}
-			System.out.println(matrixStr);
-		}
+		printlnMatrix(matrix);
 
 	}
 
